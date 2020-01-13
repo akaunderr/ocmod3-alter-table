@@ -1,7 +1,7 @@
 # Alter Table
 
 ## Description
-The «Alter Table» extension is for Opencart CMS 3.x. It is an auxiliary module for other extensions and modules to add and delete tables and columns into the Opencart DB.
+The «Alter Table» extension is for Opencart CMS 3.x. It is an helper tool for other extensions and modules making it easy to create/delete tables and columns in the Opencart DB.
 
 ## Change log
 * v1.0 (2020.01.12):
@@ -21,7 +21,7 @@ The «Alter Table» extension is for Opencart CMS 3.x. It is an auxiliary module
 
 ## Links
 * [GitHub](https://github.com/underr-ua/ocmod3-alter-table)
-* [Homepage](https://underr.space/notes/projects/project-021.html)
+* [Homepage](https://underr.space/notes/projects/project-019.html)
 
 ## License
 [End-User License Agreement](https://raw.githubusercontent.com/underr-ua/ocmod3-alter-table/master/LICENSE.txt)
