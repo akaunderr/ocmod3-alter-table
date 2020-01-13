@@ -22,15 +22,19 @@ class ModelExtensionModuleAlterTable extends Model {
 	}
 
 	public function addColumn($table, $column, $column_type) {
-		$query = $this->hasColumn($table, $column);
+        $has_column = $this->hasColumn($table, $column);
 
-		if (!$query->num_rows) {
+		if (!$has_column) {
 			$this->db->query('ALTER TABLE ' . DB_PREFIX . $table . ' ADD ' . $column . ' ' . $column_type);
 		}
 	}
 
 	public function delColumn($table, $column) {
-		$query = $this->db->query('ALTER TABLE ' . DB_PREFIX . $table . ' DROP IF EXISTS ' . $column);
+        $has_column = $this->hasColumn($table, $column);
+
+        if ($has_column) {
+    		$this->db->query('ALTER TABLE ' . DB_PREFIX . $table . ' DROP IF EXISTS ' . $column);
+        }
 	}
 
 	public function hasTable($table) {
@@ -40,10 +44,10 @@ class ModelExtensionModuleAlterTable extends Model {
 	}
 
 	public function addTable($table, $columns, $engine) {
-		$query = $this->db->query('CREATE TABLE IF NOT EXISTS ' . DB_PREFIX . $table . ' (' . $columns . ') ' . $engine);
+		$this->db->query('CREATE TABLE IF NOT EXISTS ' . DB_PREFIX . $table . ' (' . $columns . ') ' . $engine);
 	}
 
 	public function delTable($table) {
-		$query = $this->db->query('DROP TABLE IF EXISTS ' . DB_PREFIX . $table);
+		$this->db->query('DROP TABLE IF EXISTS ' . DB_PREFIX . $table);
 	}
 }
