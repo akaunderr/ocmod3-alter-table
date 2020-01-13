@@ -18,27 +18,26 @@ class ModelExtensionModuleAlterTable extends Model {
 	public function hasColumn($table, $column) {
 		$query = $this->db->query('DESC ' . DB_PREFIX . $table . ' ' . $column);
 
-        return (bool)$query->num_rows;
+		return (bool)$query->num_rows;
 	}
 
 	public function addColumn($table, $column, $column_type) {
 		$query = $this->hasColumn($table, $column);
 
 		if (!$query->num_rows) {
-			$this->db->query('ALTER TABLE ' . DB_PREFIX . $table .' ADD ' . $column . ' ' . $column_type);
+			$this->db->query('ALTER TABLE ' . DB_PREFIX . $table . ' ADD ' . $column . ' ' . $column_type);
 		}
 	}
 
 	public function delColumn($table, $column) {
-        $query = $this->db->query('ALTER TABLE ' . DB_PREFIX .  $table . ' DROP IF EXISTS ' . $column);
+		$query = $this->db->query('ALTER TABLE ' . DB_PREFIX . $table . ' DROP IF EXISTS ' . $column);
 	}
 
-
 	public function hasTable($table) {
-        $query = $this->db->query('SHOW TABLES LIKE ' . DB_PREFIX .  $table);
+		$query = $this->db->query('SHOW TABLES LIKE ' . DB_PREFIX . $table);
 
-        return (bool)$query->num_rows;
-    }
+		return (bool)$query->num_rows;
+	}
 
 	public function addTable($table, $columns, $engine) {
 		$query = $this->db->query('CREATE TABLE IF NOT EXISTS ' . DB_PREFIX . $table . ' (' . $columns . ') ' . $engine);
