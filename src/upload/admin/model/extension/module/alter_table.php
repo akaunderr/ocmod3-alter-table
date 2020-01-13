@@ -9,7 +9,7 @@
  *
  * @author     Andrii Burkatskyi aka underr, <underr.ua@gmail.com>
  * @copyright  Copyright © 2020, Andrii Burkatskyi aka underr
- * @license    https://raw.githubusercontent.com/underr-ua/ocmod3-alter-table/master/EULA.txt  EULA
+ * @license    https://raw.githubusercontent.com/underr-ua/ocmod3-alter-table/master/LICENSE.txt  MIT License
  *
  * @link       https://underr.space/notes/projects/project-019.html
  * @link       https://github.com/underr-ua/ocmod3-alter-table
