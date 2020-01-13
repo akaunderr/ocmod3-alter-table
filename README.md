@@ -24,4 +24,4 @@ The «Alter Table» extension is for Opencart CMS 3.x. It is an helper tool for 
 * [Homepage](https://underr.space/notes/projects/project-019.html)
 
 ## License
-[End-User License Agreement](https://raw.githubusercontent.com/underr-ua/ocmod3-alter-table/master/LICENSE.txt)
+[MIT License](https://raw.githubusercontent.com/underr-ua/ocmod3-alter-table/master/LICENSE.txt)
